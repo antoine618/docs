@@ -1,94 +1,98 @@
 ---
-title: 'Development'
-description: 'Preview changes locally to update your docs'
+title: "Account Setup"
+description: "Configure your Moonrank account for optimal results"
 ---
 
-<Info>
-  **Prerequisites**:
-  - Node.js version 19 or higher
-  - A docs repository with a `docs.json` file
-</Info>
+## Creating Your Account
 
-Follow these steps to install and run Mintlify on your operating system.
+When you first sign up for Moonrank, you'll be guided through our onboarding wizard:
 
-<Steps>
-<Step title="Install the Mintlify CLI">
+1. **Enter Your Website URL** - This is where your articles will be published
+2. **Verify Your Site** - Add a DNS record or upload an HTML file to verify ownership
+3. **Configure Your CMS** - Connect WordPress, Webflow, or manual publishing
+4. **Set Your Goals** - Define what success looks like (traffic targets, ranking positions, etc.)
 
-```bash
-npm i -g mint
-```
-</Step>
+## Dashboard Preferences
 
-<Step title="Preview locally">
+Configure how Moonrank displays information in your **Settings → Dashboard Preferences**:
 
-Navigate to your docs directory where your `docs.json` file is located, and run the following command:
+- **Default Time Range** - Choose between 7 days, 30 days, 90 days, or custom date ranges
+- **Notification Frequency** - Get daily, weekly, or monthly summaries
+- **Content Language** - Select your preferred language for article generation
+- **Timezone** - Set your timezone for accurate scheduling
 
-```bash
-mint dev
-```
+## CMS Integration
 
-A local preview of your documentation will be available at `http://localhost:3000`.
+### WordPress Integration
 
-</Step>
-</Steps>
+- Install the Moonrank plugin from your WordPress dashboard
+- Authenticate with your Moonrank account
+- Articles will auto-publish as drafts for your review
 
-## Custom ports
+### Manual Publishing
 
-By default, Mintlify uses port 3000. You can customize the port Mintlify runs on by using the `--port` flag. For example, to run Mintlify on port 3333, use this command:
+- Generate articles in Moonrank
+- Copy the content and publish manually to your site
+- Update the article URL in Moonrank to track performance
 
-```bash
-mint dev --port 3333
-```
+### API Integration
 
-If you attempt to run Mintlify on a port that's already in use, it will use the next available port:
+- Use Moonrank's API to automate publishing
+- See API Reference section for detailed documentation
 
-```md
-Port 3000 is already in use. Trying 3001 instead.
-```
+## Team Management
 
-## Mintlify versions
+### Add Team Members
 
-Please note that each CLI release is associated with a specific version of Mintlify. If your local preview does not align with the production version, please update the CLI:
+1. Go to **Settings → Team**
+2. Click "Invite Member"
+3. Enter their email address
+4. Select their role: Admin, Editor, or Viewer
 
-```bash
-npm mint update
-```
+### Role Permissions
 
-## Validating links
+- **Admin** - Full access to all features and settings
+- **Editor** - Can create, edit, and publish articles; cannot access settings
+- **Viewer** - Read-only access to reports and analytics
 
-The CLI can assist with validating links in your documentation. To identify any broken links, use the following command:
+## Billing & Subscription
 
-```bash
-mint broken-links
-```
+### View Your Plan
 
-## Deployment
+- Navigate to **Settings → Billing**
+- See your current subscription tier
+- View next billing date and cost
 
-If the deployment is successful, you should see the following:
+### Upgrade or Downgrade
 
-<Frame>
-  <img src="/images/checks-passed.png" alt="Screenshot of a deployment confirmation message that says All checks have passed." style={{ borderRadius: '0.5rem' }} />
-</Frame>
+- Click "Change Plan" to modify your subscription
+- Changes take effect at your next billing cycle
+- Downgrading within 30 days qualifies for a prorated refund
 
-## Code formatting
+### Manage Payment Method
 
-We suggest using extensions on your IDE to recognize and format MDX. If you're a VSCode user, consider the [MDX VSCode extension](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx) for syntax highlighting, and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for code formatting.
+- Update your credit card or billing information
+- Set up invoice email delivery
+- Export billing history
 
-## Troubleshooting
+## Two-Factor Authentication
 
-<AccordionGroup>
-  <Accordion title='Error: Could not load the "sharp" module using the darwin-arm64 runtime'>
+Protect your account with 2FA:
 
-    This may be due to an outdated version of node. Try the following:
-    1. Remove the currently-installed version of the CLI: `npm remove -g mint`
-    2. Upgrade to Node v19 or higher.
-    3. Reinstall the CLI: `npm i -g mint`
-  </Accordion>
+1. Go to **Settings → Security**
+2. Click "Enable Two-Factor Authentication"
+3. Scan the QR code with your authenticator app
+4. Enter the 6-digit code to verify
+5. Save your backup codes in a safe place
 
-  <Accordion title="Issue: Encountering an unknown error">
-  
-    Solution: Go to the root of your device and delete the `~/.mintlify` folder. Then run `mint dev` again.
-  </Accordion>
-</AccordionGroup>
+## Email Preferences
 
-Curious about what changed in the latest CLI version? Check out the [CLI changelog](https://www.npmjs.com/package/mintlify?activeTab=versions).
+Control what emails you receive:
+
+1. **Settings → Email Preferences**
+2. Toggle specific email types on/off:
+   - Daily ranking updates
+   - Article performance alerts
+   - Weekly summaries
+   - Technical audit reports
+   - System notifications

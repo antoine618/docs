@@ -1,88 +1,110 @@
 ---
-title: 'Markdown syntax'
-description: 'Text, title, and styling in standard markdown'
-icon: 'text-size'
+title: "Settings & Preferences"
+description: "Configure Moonrank to match your workflow"
 ---
-
-## Titles
-
-Best used for section headers.
-
-```md
-## Titles
-```
-
-### Subtitles
-
-Best used for subsection headers.
-
-```md
-### Subtitles
-```
-
-<Tip>
-
-Each **title** and **subtitle** creates an anchor and also shows up on the table of contents on the right.
-
-</Tip>
-
-## Text formatting
-
-We support most markdown formatting. Simply add `**`, `_`, or `~` around text to format it.
-
-| Style         | How to write it   | Result          |
-| ------------- | ----------------- | --------------- |
-| Bold          | `**bold**`        | **bold**        |
-| Italic        | `_italic_`        | _italic_        |
-| Strikethrough | `~strikethrough~` | ~strikethrough~ |
-
-You can combine these. For example, write `**_bold and italic_**` to get **_bold and italic_** text.
-
-You need to use HTML to write superscript and subscript text. That is, add `<sup>` or `<sub>` around your text.
-
-| Text Size   | How to write it          | Result                 |
-| ----------- | ------------------------ | ---------------------- |
-| Superscript | `<sup>superscript</sup>` | <sup>superscript</sup> |
-| Subscript   | `<sub>subscript</sub>`   | <sub>subscript</sub>   |
-
-## Linking to pages
-
-You can add a link by wrapping text in `[]()`. You would write `[link to google](https://google.com)` to [link to google](https://google.com).
-
-Links to pages in your docs need to be root-relative. Basically, you should include the entire folder path. For example, `[link to text](/writing-content/text)` links to the page "Text" in our components section.
-
-Relative links like `[link to text](../text)` will open slower because we cannot optimize them as easily.
-
-## Blockquotes
-
-### Singleline
-
-To create a blockquote, add a `>` in front of a paragraph.
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
-```
-
-### Multiline
-
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-
-```md
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.
-```
-
-### LaTeX
-
-Mintlify supports [LaTeX](https://www.latex-project.org) through the Latex component.
-
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-
-```md
-<Latex>8 x (vk x H1 - H2) = (0,1)</Latex>
-```
+# Settings & Preferences
+Customize Moonrank's settings to match your specific needs and team workflow.
+## General Settings
+### Website Configuration
+- **Primary Domain** - Your main website URL
+- **Additional Domains** - Track subdomains or multiple properties
+- **Preferred Language** - Language for article generation and UI
+- **Timezone** - For accurate scheduling and reporting
+### Publishing Options
+- **Default CMS** - WordPress, Webflow, manual, or API
+- **Auto-Publish** - Automatically publish articles after review
+- **Scheduling** - Default day/time for scheduled articles
+- **Status** - Post status when publishing (draft, published, scheduled)
+## Content Preferences
+### Article Generation Settings
+- **Default Word Count** - Target length for generated articles
+- **Writing Style** - Tone and voice (professional, casual, technical, etc.)
+- **Language** - English, Spanish, French, German, etc.
+- **Include Sources** - Cite sources in articles
+- **Content Angle** - Template or custom approach
+### SEO Defaults
+- **Meta Description Length** - Target character count
+- **Keyword Placement** - Where to include target keywords
+- **Internal Link Count** - How many internal links to include
+- **External Link Count** - How many external links to include
+## Team & Collaboration
+### Team Members
+- Add/remove team members
+- Set roles and permissions
+- Manage access levels
+### Approval Workflows
+- Set up custom approval chains
+- Require multiple approvers
+- Send notifications at each step
+### Activity Tracking
+- See who created/edited each article
+- Audit log of all changes
+- Revert to previous versions
+## Notifications
+### Email Alerts
+Toggle on/off for:
+- Daily ranking updates
+- New backlinks detected
+- Technical issues found
+- Articles published
+- Comments on your articles
+- Team messages
+### Notification Frequency
+- **Real-time** - Get alerts immediately
+- **Daily Digest** - One email per day with all updates
+- **Weekly Summary** - One email per week
+- **Off** - Don't send notifications
+### Slack Integration
+- Connect your Slack workspace
+- Get Moonrank notifications in Slack
+- Create tasks from Slack messages
+- Approve articles from Slack
+## API & Integrations
+### API Keys
+- Generate API keys for your account
+- Manage API usage
+- Set rate limits
+- Regenerate keys for security
+### Webhook Configuration
+- Set up webhooks for events:
+  - Article published
+  - Ranking change
+  - Technical issue found
+  - New backlink detected
+- Send data to external services
+### Third-Party Integrations
+- Google Analytics
+- Google Search Console
+- Slack
+- Zapier
+- Custom API endpoints
+## Data & Privacy
+### Data Backup
+- Export all your articles, keywords, and data
+- Schedule automatic backups
+- Download backups as CSV/JSON
+### Privacy Settings
+- Control what data Moonrank collects
+- GDPR compliance options
+- Data deletion requests
+### Usage Statistics
+- See how much of your plan you're using
+- Article quota remaining
+- API calls remaining
+- Storage space used
+## Billing
+### Subscription Management
+- View current plan
+- Upgrade/downgrade
+- Set up annual billing (save 20%)
+- Manage payment method
+### Usage Metrics
+- Articles generated this month
+- Keywords tracked
+- API calls used
+- Team members
+### Invoices
+- View all past invoices
+- Download receipts
+- Tax ID management
+- Set up auto-pay

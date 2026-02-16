@@ -1,87 +1,109 @@
 ---
-title: 'Navigation'
-description: 'The navigation field in docs.json defines the pages that go in the navigation menu'
-icon: 'map'
+title: "Keywords & SEO Research"
+description: "Find and track the keywords that drive your business"
 ---
 
-The navigation menu is the list of links on every website.
-
-You will likely update `docs.json` every time you add a new page. Pages do not show up automatically.
-
-## Navigation syntax
-
-Our navigation syntax is recursive which means you can make nested navigation groups. You don't need to include `.mdx` in page names.
-
-<CodeGroup>
-
-```json Regular Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": ["quickstart"]
-        }
-      ]
-    }
-  ]
-}
-```
-
-```json Nested Navigation
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Getting Started",
-          "pages": [
-            "quickstart",
-            {
-              "group": "Nested Reference Pages",
-              "pages": ["nested-reference-page"]
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-```
-
-</CodeGroup>
-
-## Folders
-
-Simply put your MDX files in folders and update the paths in `docs.json`.
-
-For example, to have a page at `https://yoursite.com/your-folder/your-page` you would make a folder called `your-folder` containing an MDX file called `your-page.mdx`.
-
-<Warning>
-
-You cannot use `api` for the name of a folder unless you nest it inside another folder. Mintlify uses Next.js which reserves the top-level `api` folder for internal server calls. A folder name such as `api-reference` would be accepted.
-
-</Warning>
-
-```json Navigation With Folder
-"navigation": {
-  "tabs": [
-    {
-      "tab": "Docs",
-      "groups": [
-        {
-          "group": "Group Name",
-          "pages": ["your-folder/your-page"]
-        }
-      ]
-    }
-  ]
-}
-```
-
-## Hidden pages
-
-MDX files not included in `docs.json` will not show up in the sidebar but are accessible through the search bar and by linking directly to them.
+## Finding Keywords
+### Method 1: Keyword Explorer
+1. Go to **Keywords → Keyword Explorer**
+2. Enter a seed keyword related to your business
+3. Moonrank shows:
+   - Monthly search volume
+   - Keyword difficulty (0-100 scale)
+   - Search intent (Informational, Commercial, Transactional)
+   - Related keywords
+   - Competitor keywords (what your competitors rank for)
+### Method 2: Topic Clusters
+1. Enter a broad topic (e.g., "running shoes")
+2. Moonrank automatically generates related keywords
+3. Organize into clusters by search intent
+4. Moonrank suggests which keywords to target first
+### Method 3: Competitor Analysis
+1. Go to **Keywords → Competitor Keywords**
+2. Enter competitor URLs
+3. See all keywords they rank for
+4. Find gaps - keywords they rank for but you don't
+5. Prioritize high-opportunity keywords
+### Method 4: AI-Powered Suggestions
+1. Describe your business or product
+2. Let Moonrank generate keyword ideas using AI
+3. Review and select which keywords to track
+## Keyword Metrics Explained
+- **Search Volume** - Average monthly searches for this keyword
+- **Keyword Difficulty** - How hard it is to rank (0-100; higher = harder)
+- **Search Intent** - Why people search for this keyword:
+  - **Informational** - Looking for information/answers
+  - **Commercial** - Researching before a purchase
+  - **Transactional** - Ready to buy
+  - **Navigational** - Looking for a specific website
+- **Trend** - Is this keyword growing or declining in popularity
+- **CPC** - Cost per click in ads (indication of commercial value)
+- **SERP Features** - Does the search result page show ads, featured snippets, videos, etc.
+## Adding Keywords to Track
+### Manual Entry
+1. Click "Add Keywords"
+2. Enter one keyword per line
+3. Set your target ranking position (1-10, 11-20, etc.)
+4. Assign to your site
+5. Click "Start Tracking"
+Moonrank will check your rankings daily and alert you to changes.
+### Bulk Import
+1. Prepare a CSV file with your keywords
+2. Go to **Keywords → Import**
+3. Upload your CSV
+4. Map columns to keyword data
+5. Click "Import"
+## Tracking Your Rankings
+### Daily Rank Checking
+Moonrank checks your keyword positions daily:
+- **Position** - Your current ranking position (1-100, or "not ranking")
+- **Change** - How much your position moved since yesterday
+- **Visibility** - Estimated percentage of clicks you get at your position
+- **Trend** - Is your ranking going up, down, or stable over 30 days?
+### Keyword Status
+- **Active** - Currently tracking
+- **Achieved** - You're ranking in position 1-3 (goal met!)
+- **On Track** - Good progress toward your target
+- **Needs Attention** - Dropped in rankings, needs optimization
+- **New** - Just added, less than 30 days of data
+### Historical Tracking
+View your ranking history for each keyword:
+- Last 30 days
+- Last 90 days
+- Last year
+- All time
+## Keyword Organization
+### Create Keyword Groups
+1. Go to **Keywords → Groups**
+2. Click "Create Group"
+3. Name your group (e.g., "Product Keywords", "Competitor Keywords")
+4. Add keywords to the group
+5. Use groups to organize your tracking by topic, team member, or campaign
+### Assign to Articles
+1. In **Articles**, click on an article
+2. Scroll to "Target Keywords"
+3. Search and select keywords
+4. Moonrank links article performance to keyword rankings
+## Keyword Insights
+### Keyword Opportunities
+Moonrank identifies keywords you should target based on:
+- Low difficulty but decent search volume
+- High search volume but low competition
+- High commercial intent that matches your business
+### Competitor Gap Analysis
+See which keywords your competitors rank for that you don't:
+1. Add competitor sites to your analysis
+2. Moonrank compares keyword rankings
+3. Identify quick-win opportunities
+4. Prioritize keywords to capture
+### Seasonal Keywords
+Moonrank flags keywords that spike seasonally:
+- View seasonal trends for each keyword
+- Plan content calendars around peaks
+- Capitalize on predictable traffic surges
+## Keyword Recommendations
+Based on your content and business, Moonrank recommends:
+- **New keywords to create content for** - Based on search volume and difficulty
+- **Quick wins** - Keywords you can rank for with minimal competition
+- **Long-tail keywords** - Less competitive, highly specific keywords
+- **Commercial keywords** - Keywords indicating buyer intent
